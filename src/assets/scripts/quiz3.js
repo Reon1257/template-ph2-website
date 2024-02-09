@@ -13,7 +13,7 @@
    * @description 問題と回答の定数
    * @type {QUIZ[]}
    */
-  const ALL_QUIZ = [
+  const ALL_QUIZ = [                                                                       //定数ALL_QUIZに問題のデータベースの配列を格納する
     {
       id: 1,
       question: '日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？',
@@ -73,8 +73,11 @@
      * @description 回答の生成
      * @type {string}
      */
-    const answersHtml = quizItem.answers.map((answer, answerIndex) => `<li class="p-quiz-box__answer__item">
-        <button class="p-quiz-box__answer__button js-answer" data-answer="${answerIndex}">
+//79行目 配列quizItemのanswersキーの要素一つ一つに操作する(map関数)
+//80行目~83行目 作成するHTML
+//?84行目 join('')配列内の各要素を指定した区切り文字で結合するメソッドです。ここでは空の文字列 '' が指定されており、要素が単純に連結されます。これにより、各 <li> 要素が1つの文字列として結合され、answersHtml にHTMLコードが格納されます。
+    const answersHtml = quizItem.answers.map((answer, answerIndex) => `<li class="p-quiz-box__answer__item">   
+        <button class="p-quiz-box__answer__button js-answer" data-answer="${answerIndex}">             
           ${answer}<i class="u-icon__arrow"></i>
         </button>
       </li>`
@@ -205,4 +208,5 @@
       })
     })
   })
-}
+};
+

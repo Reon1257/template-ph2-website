@@ -3,8 +3,9 @@
 {
   // すべての問題を取得
   const allQuiz  = document.querySelectorAll('.js-quiz');
+  console.log(allQuiz)
 
-  // buttonタグにdisabledを付与
+  // buttonタグにdisabledを付与  なにか不具合起きたら、jsでコンソールで確認！！！！！
   const setDisabled = answers => {
     answers.forEach(answer => {
       answer.disabled = true;
